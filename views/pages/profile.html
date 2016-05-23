@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head_include %>
+</head>
+<body class="container">
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+    <div class="container">
+	<!-- Page Content goes here -->
+		
+		<div class="row" id="app">
+
+			<h5>Profile</h5>
+
+			<div>
+			<ul>
+				<li><p>ID: <%= user.id %></p></li>
+				<li><p>Username: <%= user.username %></p></li>
+				<li><p>Password: <%= user.password %></p></li>
+				<li><p>Info: <%= user.info %></p></li>
+			</ul>	
+			</div>
+
+		</div>
+      	
+	</div>
+
+    <!-- footer -->
+    <% include ../partials/footer %>
+
+    <!-- foot_include -->
+    <% include ../partials/foot_include %>
+    
+</body>
+</html>
+

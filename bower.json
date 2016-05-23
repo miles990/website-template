@@ -1,0 +1,24 @@
+{
+  "name": "express-vue-project",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "AlexLee <alexlee7171@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/miles990/expressjs-vuejs-demo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "Materialize": "materialize#^0.97.6",
+    "material-design-icons": "^2.2.3",
+    "sweetalert": "^1.1.3",
+    "vue": "^1.0.21"
+  }
+}

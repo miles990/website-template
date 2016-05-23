@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head_include %>
+</head>
+<body class="container">
+	<!-- Page Content goes here -->
+	
+	<div class="row" id="app">
+
+
+		<% if (!user) { %>
+			<h2>Welcome! </h2>
+			<p>Please <a class="waves-effect waves-light modal-trigger" href="#loginModal">Login</a></p>
+			<p>Or, <a class="waves-effect waves-light modal-trigger" href="#registModal">sign on</a> account.</p>
+		<% } else { %>
+			<p>Hello, <strong><%= user.username %></strong>.</p>
+			<p>View your <a href="/profile">profile</a>.</p>
+			<p>Or, <a href="/logout">Logout</a></p>
+		<% } %>
+
+		<!-- Login Modal Structure -->
+		<div id="loginModal" class="modal modal-fixed-footer">
+			<div class="modal-content">
+				<h4>Login</h4>
+				<p>
+					<div class="row">
+						<div class="input-field col s10">
+							<i class="material-icons prefix">supervisor_account</i>
+							<input id="name" type="text" class="validate" v-model="loginName">
+							<label for="account">Account</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s10">
+							<i class="material-icons prefix">vpn_key</i>
+							<input id="password" type="password" class="validate" v-model="loginPassword">
+							<label for="password">Password</label>
+						</div>
+					</div>
+				</p>
+			</div>
+			
+
+			<div class="modal-footer">
+				<!-- <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Submit</a> -->
+				<button class="btn waves-effect waves-light modal-close" type="submit" name="action" v-on:click="loginModal">Submit
+					<i class="material-icons right">send</i>
+				</button>
+			</div>
+  		</div>
+
+  		<!-- Register Modal Structure -->
+		<div id="registModal" class="modal modal-fixed-footer">
+			<div class="modal-content">
+				<h4>Sign on</h4>
+				<p>
+					<div class="row">
+						<div class="input-field col s10">
+							<i class="material-icons prefix">supervisor_account</i>
+							<input id="name" type="text" class="validate" v-model="registName">
+							<label for="account">Account</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s10">
+							<i class="material-icons prefix">vpn_key</i>
+							<input id="password" type="password" class="validate" v-model="registPassword">
+							<label for="password">Password</label>
+						</div>
+					</div>
+					<div class="row">
+				    <form class="col s12">
+				      <div class="row">
+				        <div class="input-field col s10">
+				          <i class="material-icons prefix">mode_edit</i>
+				          <textarea id="info" class="materialize-textarea" v-model="registInfo"></textarea>
+				          <label for="info">Info</label>
+				        </div>
+				      </div>
+				    </form>
+				  </div>
+				</p>
+			</div>
+			
+
+			<div class="modal-footer">
+				<!-- <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Submit</a> -->
+				<button class="btn waves-effect waves-light modal-close" type="submit" name="action" v-on:click="registModal">Sign on
+					<i class="material-icons right">send</i>
+				</button>
+			</div>
+  		</div>
+
+	</div>
+    <!-- foot_include -->
+    <% include ../partials/foot_include %>
+    <script src="/home.js"></script>
+    
+</body>
+</html>
