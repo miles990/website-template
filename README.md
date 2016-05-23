@@ -7,4 +7,4 @@
 - use material design icons
 - use sweetalert
 - use Vue.js
-- login & register
+- login + register + profile pages
